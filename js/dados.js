@@ -12,16 +12,20 @@ function lanzarDados() {
     dineroApuesta = document.getElementById("dineroApuesta");
 
     let num = Number(numeroApostado.value);
-    // let apuesta = Number(dineroApuesta.value);
+    let apuesta = Number(dineroApuesta.value);
 
-    if (num === dado1 || num === dado2 || num === suma) {
+    if(num===dado1 && num===dado2 || num===suma){
         document.getElementById("ResulApuesta").innerHTML="GANADOR";
-        // if (num === dado1 && num === dado2) {
-        //     console.log("GANA X 3")
-        // } else {
-        //     console.log("GANA X 2")
-        // }
-    } else {
-        document.getElementById("ResulApuesta").innerHTML="PERDEDOR";
+        let premio = apuesta*3;
+        document.getElementById("dineroGanado").innerHTML=premio;
+    }else{
+        if(num===dado1 || num===dado2){
+            document.getElementById("ResulApuesta").innerHTML="GANADOR";
+            let premio = apuesta*2;
+            document.getElementById("dineroGanado").innerHTML=premio;
+        }else{
+            document.getElementById("ResulApuesta").innerHTML="PERDEDOR";
+            document.getElementById("dineroGanado").innerHTML="NO HAY PREMIO";
+        }
     }
 }
