@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <title>ApuestaDados</title>
+</head>
+<body>
+    <!-- LANZAR DADOS -->
+    <div class="container content-main">
+        <div class="row justify-content-center text-center">
+            <div class="col-12 ">
+                <h3>LANZAMIENTO DE DADOS</h3>                
+            </div>
+        </div>
+        <div>
+            <label for=""><h4>NUMERO 1/12:</h4></label>
+            <input type="number" id="numeroApostado">
+        </div>
+        <div>
+            <label for=""><h4>APUESTA: $</h4></label>
+            <input type="number" id="dineroApuesta">
+        </div>
+        <div>
+            <h4>RESULTADO APUESTA:</h4>
+            <h4 id="ResulApuesta">?</h4>
+        </div>
+        <!-- <div>
+            <h4>DINERO GANADO:</h4>
+            <h4 id="dineroGanado">?</h4>
+        </div> -->
+        <div class="row justify-content-center text-center my-4">
+            <button class="btn btn-success" onclick="lanzarDados()">
+                JUGAR
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-6 text-center">
+                <img src="images/rand.svg" class="dado" id="ImgDado1">
+            </div>
+            <div class="col-6 text-center">
+                <img src="images/rand.svg" class="dado" id="ImgDado2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="card-header my-5">
+                    <h5><b>SUMA DE LOS DADOS</b></h5>
+                    <button class="btn btn-dark white-text">
+                        <h2 id="SumaDados">0</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/dados.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
